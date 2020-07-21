@@ -1,5 +1,8 @@
-const fs = require('fs')
+const getNotes = require('./notes')
 
-//fs.writeFileSync('notes.txt', 'Take us to your master!')
+console.log(getNotes())
 
-fs.appendFileSync('notes.txt', ' We shall rule the world!')
+
+
+// const addFunc = require('./utils.js')
+// console.log(addFunc(3, 4))
