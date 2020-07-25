@@ -10,6 +10,8 @@ console.log(getNotes())
 console.log(validator.isEmail('abc_def@gh.com'))
 console.log(validator.isURL("https://pugmarx.me"))
 
-console.log(chalk.green("Success!"))
+const greenMsg = chalk.green("Success!")
+console.log(greenMsg)
+
 // const addFunc = require('./utils.js')
 // console.log(addFunc(3, 4))
