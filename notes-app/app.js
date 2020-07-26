@@ -1,12 +1,15 @@
 const validator = require('validator')
+const chalk = require('chalk')
+
 const getNotes = require('./notes')
-const chalk = require('chalk');
 
-console.log(getNotes())
+// argv[0] node executable
+// argv[1] file/script name
+console.log(process.argv[2])
+const command = process.argv[2]
 
-
-console.log(validator.isEmail('abc_def@gh.com'))
-console.log(validator.isURL("https://pugmarx.me"))
-
-const greenMsg = chalk.bold.green("Success!")
-console.log(greenMsg)
+if (command === 'add'){
+    console.log('Adding note')
+} else if (command === 'remove') {
+    console.log('Removing note')
+}
