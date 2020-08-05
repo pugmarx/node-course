@@ -13,7 +13,18 @@ const fs = require('fs')
 
 // fs.writeFileSync('1-json.json', bookJSON)
 
-const dataBuffer = fs.readFileSync('1-json.json')
-const dataJSON = dataBuffer.toString()
-const data = JSON.parse(dataJSON)
-console.log(data.title)
+// const dataBuffer = fs.readFileSync('1-json.json')
+// const dataJSON = dataBuffer.toString()
+// const data = JSON.parse(dataJSON)
+// console.log(data.title)
+
+const chgBuffer = fs.readFileSync('1_1-json.json')
+const chgBufferJSON = chgBuffer.toString()
+const chgData = JSON.parse(chgBufferJSON)
+console.log(chgData.name)
+
+chgData.name="Gunther"
+chgData.age = "33"
+
+const chgDataStr = JSON.stringify(chgData)
+fs.writeFileSync('1-json.json', chgDataStr)
